@@ -1,0 +1,51 @@
+/* Variables */
+:root{
+    --text: #140709;
+    --background: #fcf7f8;
+    --primary: #c04166;
+    --secondary: #d9d28c;
+    --accent: #b1ce6a;
+}
+
+/* Image Reset */
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a{
+    color: var(--text);
+}
+
+a:hover{
+    color: var(--accent);
+}
+
+header{
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+main{
+    margin: 1rem;
+	flex:1;
+}
+
+footer{
+    background-color: var(--primary);
+}
+
+footer a{
+    color: var(--background);
+}
