@@ -1,5 +1,13 @@
 <?php
     include_once("./resources/components/ui/ui.php");
+    include_once("./resources/components/validation/validate.php");
+
+    session_start();
+    $isLoggedIn = false;
+
+    if(isset($_SESSION["username"])&&isset($_SESSION["password"])){
+        $isLoggedIn = checkPassword($_SESSION["username"], $_SESSION["password"]); 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +22,7 @@
         <link rel="icon" href="./resources/public/favicon.png" type="image/x-icon">
     </head>
     <body>
-        <?php echo(uiHeader("An Idiot's Experience of Linux", true)); ?>
+        <?php echo(uiHeader("An Idiot's Experience of Linux", $isLoggedIn)); ?>
         <main>
             <div class="feed">
                 <div class="category">
