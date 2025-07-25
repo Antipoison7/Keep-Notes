@@ -38,8 +38,20 @@
             return($returnString);
         }
     
-        public fundtion generatePost(){
-
+        public function generatePost(){
+            return(
+                "<div class=\"post\">
+                    <div class=\"post__title\">
+                        <h1>{$this->title}</h1>
+                    </div>
+                    <div class=\"post__description\">
+                        <h2>{$this->description}</h2>
+                    </div>
+                    <div class=\"post__content\">
+                        <p>{$this->content}</p>
+                    </div>
+                </div>
+                ");
         }
     }
 ?>

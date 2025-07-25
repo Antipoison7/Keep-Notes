@@ -1,3 +1,4 @@
+
 <?php
     include_once("./resources/components/ui/ui.php");
 ?>
@@ -14,24 +15,8 @@
         <link rel="icon" href="./resources/public/favicon.png" type="image/x-icon">
     </head>
     <body>
-        <?php echo(uiHeader("An Idiot's Experience of Linux", true)); ?>
+        <?php echo(uiHeader("Log In", true)); ?>
         <main>
-            <div class="feed">
-                <div class="category">
-                    <h1></h1>
-                </div>
-                <div class="post">
-                    <div class="post__title">
-                        <h1></h1>
-                    </div>
-                    <div class="post__description">
-                        <h2></h2>
-                    </div>
-                    <div class="post__content">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
         </main>
         <?php echo(uiFooter()); ?>
     </body>

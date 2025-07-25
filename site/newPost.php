@@ -1,5 +1,6 @@
 <?php
     include_once('./resources/components/db/db.php');
+    include_once('./resources/components/ui/ui.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,12 +13,7 @@
         <link rel="icon" href="./resources/public/favicon.png" type="image/x-icon">
     </head>
     <body>
-        <header>
-            <h1 class="title">An Idiot's Experience of Linux</h1>
-            <div class="login">
-                <p>login</p>
-            </div>
-        </header>
+        <?php echo(uiHeader("An Idiot's Experience of Linux", true)); ?>
         <main>
 		<form method="post" action="./submitPost.php">
             <input type="text" name="title">
@@ -42,12 +38,7 @@
 			<button type="submit">Post</button>
 		</form>
         </main>
-        <footer>
-            <p><a href="./index.php">Home</a></p>
-            <p><a href="./login.php">Login</a></p>
-            <p><a href="./newPost.php">New Post</a></p>
-            <p><a href="./logout.php">Log Out</a></p>
-        </footer>
+        <?php echo(uiFooter()); ?>
     </body>
 </html>
 

@@ -37,6 +37,10 @@ header{
     color: var(--background);
 }
 
+header a{
+    color: var(--background);
+}
+
 main{
     margin: 1rem;
 	flex:1;
