@@ -7,10 +7,10 @@
 
         public function __construct(string $title, string $category, string $description, string $content)
         {
-           $this->title = $title;
-           $this->category = $category;
-           $this->description = $description;
-           $this->content = $content; 
+           $this->title = htmlspecialchars($title);
+           $this->category = htmlspecialchars($category);
+           $this->description = htmlspecialchars($description);
+           $this->content = nl2br(htmlspecialchars($content));
         }
 
         // Getters and Setters

@@ -1,6 +1,7 @@
 <?php
     include_once("./resources/components/ui/ui.php");
     include_once("./resources/components/validation/validate.php");
+    include_once("./resources/components/db/db.php");
 
     session_start();
     $isLoggedIn = false;
@@ -25,20 +26,18 @@
         <?php echo(uiHeader("An Idiot's Experience of Linux", $isLoggedIn)); ?>
         <main>
             <div class="feed">
-                <div class="category">
-                    <h1></h1>
-                </div>
-                <div class="post">
-                    <div class="post__title">
-                        <h1></h1>
-                    </div>
-                    <div class="post__description">
-                        <h2></h2>
-                    </div>
-                    <div class="post__content">
-                        <p></p>
-                    </div>
-                </div>
+                <?php
+                    $postCat = getPosts();
+
+                    foreach($postCat as $categoryName => $posts){
+                        echo("<div class=\"category\">
+                        <h1>" . htmlspecialchars($categoryName) . "</h1>");
+                        foreach($posts as $post){
+                            echo($post->generatePost());
+                        }
+                        echo("</div>");
+                    }
+                ?>
             </div>
         </main>
         <?php echo(uiFooter()); ?>
