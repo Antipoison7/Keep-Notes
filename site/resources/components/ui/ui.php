@@ -20,10 +20,10 @@
     function uiFooter(){
         return("
         <footer>
-            <p><a href=\"./index.php\">Home</a></p>
-            <p><a href=\"./login.php\">Login</a></p>
-            <p><a href=\"./newPost.php\">New Post</a></p>
-            <p><a href=\"./logout.php\">Log Out</a></p>
+            <a href=\"./index.php\"><p>Home</p></a>
+            <a href=\"./login.php\"><p>Login</p></a>
+            <a href=\"./newPost.php\"><p>New Post</p></a>
+            <a href=\"./logout.php\"><p>Log Out</p></a>
         </footer>
         ");
     }
