@@ -35,10 +35,27 @@ a:hover{
 header{
     background-color: var(--primary);
     color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
 header a{
     color: var(--background);
+}
+
+header div a{
+    font-size: x-large;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header div a:hover{
+    background-color: var(--background);
+    color: var(--text);
+    border: 2px solid black;
 }
 
 main{
@@ -48,6 +65,10 @@ main{
 
 footer{
     background-color: var(--primary);
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
 }
 
 footer a{

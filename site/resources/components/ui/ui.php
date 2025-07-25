@@ -10,7 +10,7 @@
 
         return("
         <header>
-            <h1 class=\"title\"><a href=\"./index.php\">" . $title . "</a></h1>
+            <a href=\"./index.php\"><h1 class=\"title\">" . $title . "</h1></a>
             <div class=\"login\">
                 <p><a href=\"" . $loginLink . "\">" . $loginText . "</a></p>
             </div>
