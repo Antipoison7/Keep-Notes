@@ -9,6 +9,11 @@
     if(isset($_SESSION["username"])&&isset($_SESSION["password"])){
         $isLoggedIn = checkPassword($_SESSION["username"], $_SESSION["password"]); 
     }
+
+    if(!$isLoggedIn){
+        header("Location: ./login.php");
+        exit;
+    }
 ?>
 <!DOCTYPE html>
 <html>
