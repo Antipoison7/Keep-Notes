@@ -1,0 +1,5 @@
+<?php
+// Yes, I am aware that you should not store credentials like this, Ideally I would use a DB, but I don't want to deal with that for this project
+$adminUsername = "";
+$adminPassword = ""; //B-Crypt Password
+?>
