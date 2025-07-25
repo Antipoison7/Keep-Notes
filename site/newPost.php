@@ -24,9 +24,12 @@
         <?php echo(uiHeader("An Idiot's Experience of Linux", $isLoggedIn)); ?>
         <main>
 		<form method="post" action="./submitPost.php">
-            <input type="text" name="title">
-            <input type="text" name="description">
-            <input type="text" list="categories" name="category">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+            <label for="category">Category</label>
+            <input type="text" list="categories" name="category" id="category">
             <datalist id="categories">
             <?php
                 $category_array = getCategories();
@@ -42,7 +45,8 @@
                 }
             ?>
             </datalist>
-			<textarea name="contents"></textarea>
+            <label for="contents">Article</label>
+			<textarea name="contents" id="contents"></textarea>
 			<button type="submit">Post</button>
 		</form>
         </main>
