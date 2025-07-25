@@ -5,11 +5,15 @@
         if(!strlen($title) || !strlen($category) || !strlen($description) || !strlen($content)){
             return false;
         }
+        else{
+            return true;
+        }
     }
 
     function checkPassword(string $username, string $password){
-        global $adminPassword, $adminUsername;
         try{
+            global $adminPassword, $adminUsername;
+            
             if(($username == $adminUsername)&&(password_verify($password, $adminPassword))){
                 return(true);
             }
